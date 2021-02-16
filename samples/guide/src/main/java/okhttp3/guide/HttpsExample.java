@@ -1,11 +1,12 @@
 package okhttp3.guide;
 
-import java.io.IOException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class GetExample {
+import java.io.IOException;
+
+public class HttpsExample {
   OkHttpClient client = OkHttpClientFactory.getInstance().newClient();
 
   String run(String url) throws IOException {
@@ -19,9 +20,8 @@ public class GetExample {
   }
 
   public static void main(String[] args) throws IOException {
-    GetExample example = new GetExample();
-    String url ="https://raw.github.com/square/okhttp/master/README.md";
-    url = "http://www.baidu.com";
+    HttpsExample example = new HttpsExample();
+    String url = "https://www.baidu.com";
     String response = example.run(url);
     System.out.println(response);
   }
